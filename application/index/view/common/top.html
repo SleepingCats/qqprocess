@@ -1,0 +1,45 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="container-fluid">
+        <div class="navbar-container">
+            <div class="container-fluid">
+            <!-- Navbar Barnd -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav nav-pills">
+                    <li ><img src="__PUBLIC__/images/psb%20(1).jpg" class="tupianlogo"></li>
+                    <li ><a class="navbar-brand"  href=""><b>考勤管理系统</b></a></li>
+
+                </ul>
+
+            </div>
+            <!-- /Navbar Barnd -->
+            <!-- Sidebar Collapse -->
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="collapse-icon fa fa-bars"></i>
+            </div>
+            <!-- /Sidebar Collapse -->
+            <!-- Account Area and Settings -->
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ><img src="__PUBLIC__/images/person2.jpg" class="tupianren"></li>
+                        <li title=" 修改密码" class="toppadding"><h4><a  href="{:url('localhost:808/index/index/passwordEdit',array('id'=>$Request.session.username))}">
+                                       {$Request.session.username}
+                                    </a></h4></li>
+                        <li class="rightpadding"><h4><a href="{:url('index/logout')}">退出登录</a></h4></li>
+                    </ul>
+            </div>
+          </div>
+            </div>
+            </div>
+            <!-- /Account Area and Settings -->
+        </div>
+
+
+
+</nav>

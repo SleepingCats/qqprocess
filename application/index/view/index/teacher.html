@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <!--Beyond styles-->
+
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top"}
+	<!-- /头部 -->
+    <div class=" container HomeTop ">
+        <div class="row">
+            <div class="col-md-3">
+                {include file="common/xinxi"}
+            </div>
+            <div class="col-md-9" >
+                <div class="page-content">
+                    <!-- Page Breadcrumb -->
+                    <div class="page-breadcrumbs">
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#">系统</a>
+                            </li>
+                            <li class="active">教师管理</li>
+                        </ul>
+                    </div>
+                    <!-- /Page Breadcrumb -->
+
+                    <!-- Page Body -->
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-xs-12">
+                                            <table class="table table-bordered table-hover table-responsive ">
+                                                <thead >
+                                                <tr class="active">
+                                                    <th class="text-center" width="4%">ID</th>
+                                                    <th class="text-center">班级号</th>
+                                                    <th class="text-center" width="14%">系</th>
+                                                    <th class="text-center">专业</th>
+
+                                                    <th class="text-center">操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {foreach ($list as $k=>$lst)}
+                                                <tr class="bg-info">
+                                                    <td align="center">{$lst.id}</td>
+                                                    <td align="center">{$lst.class}</td>
+                                                    <td align="center">{$de_name.departmentName}</td>
+                                                    <td align="center">{$pr_name.professionName}</td>
+
+                                                    <td align="center" colspan="3">
+                                                        <a href="{:url('localhost:808/index/teacher/lst',
+                                    	array('tid'=>$lst['teacherId'],'cid'=>$lst['class']))}" class="btn btn-link btn-sm shiny">
+                                                            <i class="fa fa-edit"></i> 查看考勤情况
+                                                        </a>
+                                                        <a href="{:url('localhost:808/index/teacher/allin',
+                                    	array('tid'=>$lst['teacherId'],'cid'=>$lst['class']))}" class="btn btn-link btn-sm shiny">
+                                                            <i class="fa fa-edit"></i> 统计成绩
+                                                        </a>
+                                                        <a onclick="fasongkaoqin()" id="shenhe" class="btn btn-link btn-sm shiny">
+                                                            <i class="fa fa-edit"></i> 审核考勤情况
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+                                                {/foreach}
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div style="text-align:right; margin-top:10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /Page Body -->
+                </div>
+
+
+	    <!--Basic Scripts-->
+    <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+    <script src="__PUBLIC__/style/kaoqin.js"></script>
+
+
+
+
+</body></html>

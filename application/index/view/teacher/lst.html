@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <!--Beyond styles-->
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top"}
+
+	<!-- /头部 -->
+
+    <div class=" container HomeTop ">
+        <div class="row">
+            <div class="col-md-3">
+                {include file="common/xinxi"}
+            </div>
+            <div class="col-md-9" >
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li>
+                        <a href="{:url('admin/lst')}">教师考勤</a>
+                    </li>
+                                        <li class="active">修改考勤信息</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post">
+                        <table class="table table-bordered table-hover table-responsive ">
+                            <thead >
+                            <tr class="active">
+                                <th class="text-center" width="4%">ID</th>
+                                <th class="text-center">班级号</th>
+                                <th class="text-center" >课程名称</th>
+                                <th class="text-center" >学生姓名</th>
+                                <th class="text-center">系部</th>
+                                <th class="text-center">专业</th>
+                                 <th class="text-center">指导教师</th>
+                                  <th class="text-center">考勤状态</th>
+                                  <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	  	{foreach $result as $k=>$stu }
+                            <tr class="bg-info">
+                                <td align="center">{$stu.Id}</td>
+                                <td align="center">{$stu.class}</td>
+                                <td align="center">{$stu.courseName}</td>
+                                <td align="center">{$stu.studentName}</td>
+                                 <td align="center">{$stu.departmentName}</td>
+                                  <td align="center">{$stu.professionName}</td>
+                                  <td align="center">{$stu.teacherName}</td>
+                                <td align="center">
+
+                                    {$stu.stateName}
+                                </td>
+                                 <td align="center">
+                                    <a href="{:url('localhost:808/index/teacher/edit',
+                                    	array('sid'=>$stu['Id']))}" class="btn btn-link btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 修改考勤
+                                    </a>
+                                </td>
+                                
+                            </tr>
+                           {/foreach}
+                   
+                        </tbody>
+
+                    </table>
+
+                    </form>
+                    <div class="text-right"> <button onclick="sendEmail()" class="btn btn-info btn-group-sm">发送邮件</button></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+                </div>
+            <!-- /Page Content -->
+
+
+	    <!--Basic Scripts-->
+    <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+    <script src="__PUBLIC__/style/kaoqin.js"></script>
+    
+
+
+</body></html>

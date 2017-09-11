@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <!--Beyond styles-->
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top"}
+	<!-- /头部 -->
+
+    <div class=" container HomeTop ">
+        <div class="row">
+            <div class="col-md-3">
+			            <!-- Page Sidebar -->
+           		<div class="leftmenu" id="sidebar">
+                    <div class="panel  panel-info">
+                        <!-- Sidebar Menu -->
+                        <div class="panel-heading"><span class="menu-text">考勤系统</span></div>
+                        <ul class="nav nav-pills  nav-stacked">
+                            <li role="presentation">
+                                <a href="#" class="menu-dropdown">
+                                    <i class="menu-icon fa fa-user"></i>
+                                    <span class="menu-text">统计考勤 </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                                <ul class="nav nav-pills  nav-stacked">
+                                    <li>
+                                        <a href="http://localhost:808/kqsystem/public/INDEX.PHP/INDEX/Fadmin/tselect">
+                                    <span class="menu-text">
+                                        统计考勤                                 </span>
+                                            <i class="menu-expand"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation">
+                                <a href="#" class="menu-dropdown">
+                                    <i class="menu-icon fa fa-list"></i>
+                                    <span class="menu-text">课程管理</span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                                <ul class="nav nav-pills  nav-stacked">
+                                    <li>
+                                        <a href="http://localhost:808/kqsystem/public/index.php/index/Fadmin/classadd">
+                                    <span class="menu-text">
+                                        设置课程表                              </span>
+                                            <i class="menu-expand"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation">
+                                <a href="#" class="menu-dropdown">
+                                    <i class="menu-icon fa fa-file-text"></i>
+                                    <span class="menu-text">学生查询</span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                                <ul class="nav nav-pills  nav-stacked">
+                                    <li>
+                                        <a href="http://localhost:808/kqsystem/public/index.php/index/index/mistake">
+                                    <span class="menu-text">
+                                        查询结果                                   </span>
+                                            <i class="menu-expand"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation">
+                                <a href="#" class="menu-dropdown">
+                                    <i class="menu-icon fa fa-list"></i>
+                                    <span class="menu-text">教师考勤</span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                                <ul class="nav nav-pills  nav-stacked">
+                                    <li>
+                                        <a href="http://localhost:8088/kqsystem/public/index.php/index/admin/addstudent">
+                                    <span class="menu-text">
+                                                 教师考勤查询                         </span>
+                                            <i class="menu-expand"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- /Sidebar Menu -->
+                    </div>
+                <!-- /Sidebar Menu -->
+            </div>
+
+                </div>
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="col-md-9" >
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">教师</a>
+                    </li>
+                                        <li class="active">14207</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover table-responsive ">
+                        <thead >
+                        <tr class="active">
+                            	    <th class="text-center" >课程</th>
+                                <th class="text-center" >正常</th>
+                                <th class="text-center">迟到</th>
+                                <th class="text-center">早退</th>
+                                <th class="text-center">事假</th>
+                                <th class="text-center">病假</th>
+                                 <th class="text-center">旷课</th>
+                                 <th class="text-center">成绩</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	  {foreach ($result as $k=>$stu)}
+                              <tr class="bg-info">
+                                <td align="center">{$stu.courseName}</td>
+          						<td align="center">{$state_id.zc}</td>
+                                <td align="center">{$state_id.cd}</td>
+                                <td align="center">{$state_id.zt}</td>
+                                <td align="center">{$state_id.sj}</td>
+                                <td align="center">{$state_id.bj}</td>
+                                <td align="center">{$state_id.kk}</td>
+                                <td align="center">{$stu.score}</td>
+                                
+                            </tr>
+                            {/foreach}
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align:right; margin-top:10px;">
+                	                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+                </div>
+            <!-- /Page Content -->
+		</div>
+	</div>
+
+	    <!--Basic Scripts-->
+    <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+
+
+
+</body></html>

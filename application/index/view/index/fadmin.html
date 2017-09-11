@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <!--Beyond styles-->
+
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+	<body>
+	<!--	<h1>欢迎来到考勤注册页面</h1>-->
+		{include file="common/top"}
+    <div class=" container HomeTop ">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="leftmenu" id="sidebar">
+                    <div class="panel  panel-info">
+                        <!-- Sidebar Menu -->
+                        <div class="panel-heading"><h1><span class="menu-text">考勤系统</span></h1></div>
+                <ul class="nav nav-pills  nav-stacked" style="margin-bottom: 10%">
+                    <li role="presentation">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon fa fa-user"></i>
+                            <h3><span class="menu-text">考勤查询 </span></h3>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="nav nav-pills  nav-stacked">
+                            <li>
+                                <a href="http://localhost:808/kqsystem/public/INDEX.PHP/INDEX/Fadmin/tselect">
+                                    <span class="menu-text">统计查询分类</span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                        </ul>                            
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon fa fa-list"></i>
+                            <h3><span class="menu-text">课程管理</span></h3>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="nav nav-pills  nav-stacked">
+                            <li>
+                                <a href="http://localhost:808/kqsystem/public/index.php/index/Fadmin/classadd">
+                                    <span class="menu-text">
+                                        设置课程表                              </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                        </ul>                            
+                    </li>
+
+                </ul>
+                        </div>
+                <!-- /Sidebar Menu -->
+            </div>
+                </div>
+            <div class="col-md-8">
+                <div class="jumbotron" style="background-color: white;opacity: 0.8">
+                    <div class="container text-center text-success">
+                        欢迎进入考勤系统-教辅管理，请保护自己信息！
+                    </div>
+                </div>
+
+            </div>
+            </div>
+	</div>
+    </body>
+    <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+</html>
+
+

@@ -1,0 +1,75 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/font-awesome.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__PUBLIC__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/style/demo.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+	<body>
+	<!--	<h1>欢迎来到考勤注册页面</h1>-->
+		{include file="common/top"}
+		<!--<form action="" method="post">
+			<table>
+				<tr>
+					<td>用户名</td>
+					<td><input id="username" name="username" type="text"></td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td><input id="password" name="password" type="text"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit" name="submit">提交</button></td>
+				</tr>
+			</table>
+		</form>-->
+		<div>
+			<h1 align="center" >登录界面</h1>
+			<div>
+				<form action="" method="post">
+					<table align="center">
+						<tr>
+							<td>用户名</td>
+							<td><input type="text" id="username" name="username"></td>
+						</tr>
+						<tr>
+							<td>密码</td>
+							<td><input type="password" id="password" name="password"></td>
+						</tr>
+						<tr>
+							<td>选择角色</td>
+							<td> <select name='ruleid' id='ruleid' >
+								<option id="1" name="1" value='1'>教师</option>
+								<option id="2" name="2" value='2'>系统管理人员</option>
+								<option id="3" name="3" value='3'>教辅管理员</option>
+								<option id="4" name="4" value='4'>其他</option>
+							</select></td>
+						</tr>
+						<tr>
+					<td colspan="2"><button type="submit" name="submit">登录</button></td>
+				</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		{include file="common/left"}
+	</body>
+	    <script src="__PUBLIC__/style/jquery_002.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+    <script src="__PUBLIC__/style/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__PUBLIC__/style/beyond.js"></script>
+</html>-->

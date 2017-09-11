@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <!--Beyond styles-->
+
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="navbar-container">
+                    <div class="container-fluid">
+                        <!-- Navbar Barnd -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <ul class="nav navbar-nav nav-pills">
+                                <li ><img src="__PUBLIC__/images/psb%20(1).jpg" class="tupianlogo"></li>
+                                <li ><a class="navbar-brand"  href=""><b>考勤管理系统</b></a></li>
+
+                            </ul>
+
+                        </div>
+                        <!-- /Navbar Barnd -->
+                        <!-- Sidebar Collapse -->
+                        <div class="sidebar-collapse" id="sidebar-collapse">
+                            <i class="collapse-icon fa fa-bars"></i>
+                        </div>
+                        <!-- /Sidebar Collapse -->
+                        <!-- Account Area and Settings -->
+                        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li ><img src="__PUBLIC__/images/person2.jpg" class="tupianren"></li>
+                                <li title=" 修改密码" class="toppadding"><h4><a  href="">
+                                    {$Request.session.username}
+                                </a></h4></li>
+                                <li class="rightpadding"><h4><a href="http://localhost:808/kqsystem/public/index.php/">退出登录</a></h4></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Account Area and Settings -->
+        </div>
+
+
+
+    </nav>
+
+	<!-- /头部 -->
+
+    <div class=" container HomeTop ">
+        <div class="row">
+            <div class="col-md-3">
+                {include file="common/xinxi"}
+            </div>
+            <div class="col-md-9" >
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li>
+                        <a href="{:url('admin/lst')}">考勤查询</a>
+                    </li>
+                                        <li class="active">老师查询</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post">
+                        <table class="table table-bordered table-hover table-responsive ">
+                            <thead >
+                            <tr class="active">
+                                <th class="text-center" width="4%">ID</th>
+                                <th class="text-center">班级号</th>
+
+                                <th class="text-center" >课程名称</th>
+                                <th class="text-center" >学生姓名</th>
+                                <th class="text-center">系部</th>
+                                <th class="text-center">专业</th>
+                                 <th class="text-center">指导教师</th>
+                                  <th class="text-center">考勤状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	  	
+                              {foreach ($result as $k=>$stu) }
+                              <tr class="bg-info">
+                                <td align="center">{$stu.Id}</td>
+                                <td align="center">{$stu.class}</td>
+
+                                <td align="center">{$stu.courseName}</td>
+                                <td align="center">{$stu.name}</td>
+                                 <td align="center">{$stu.departmentName}</td>
+                                  <td align="center">{$stu.professionName}</td>
+                                  <td align="center">{$stu.teacherName}</td>
+                                <td align="center">
+
+                                    {$stu.state}
+                                </td>
+
+                                
+                            </tr>
+                           {/foreach}
+                   
+                        </tbody>
+
+                    </table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+        </div>
+
+	    <!--Basic Scripts--></body>  <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+<script src="__PUBLIC__/style/bootstrap.js"></script></html>

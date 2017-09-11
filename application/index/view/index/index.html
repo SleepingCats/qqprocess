@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>考勤登陆界面</title>
+    <meta name="description" content="login page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/style/Login.css">
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/login-register.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<!--Head Ends-->
+<!--Body-->
+
+<body >
+<div class="fh5co-loader"></div>
+<nav  class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav nav-pills">
+                    <li ><img src="__PUBLIC__/images/psb%20(1).jpg"  class="tupianlogo"></li>
+                    <li ><a class="navbar-brand" href=""><b>考勤管理系统</b></a></li>
+
+                </ul>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul  class="nav navbar-nav navbar-right">
+                    <li ><img src="__PUBLIC__/images/person1.jpg" class="tupianren"></li>
+                    <li class="toppadding"> <a  style="text-transform: capitalize" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();"><b style="font-size: 20px">登录</b></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
+<div class="modal fade login" id="loginModal">
+    <div class="modal-dialog login animated">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" >账号密码登录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box">
+                    <div class="content">
+                        <div class="division">
+                            <div class="line l"></div>
+                            <span  class="modal-title2" style="color: #c0c0c0">登录</span>
+                            <div class="line r"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="form loginBox">
+                            <form action="" method="post"  name="form">
+                                <div class="loginbox bg-white">
+
+
+                                    <div class="loginbox-textbox">
+                                        <input  class="form-control" placeholder="姓名" name="username" type="text">
+                                    </div>
+                                    <div class="loginbox-textbox">
+                                        <input class="form-control" placeholder="密码" name="password" type="password">
+                                    </div>
+                                    <div class="loginbox-textbox">
+
+                                        <h5 class="modal-title" style="margin: 10px auto;display: inline-block;">登录人员: </h5>
+                                        <div style="display: inline-block;" >
+                                            <select name='ruleid' id='ruleid' >
+                                            <option id="1" name="1" value='1'>教师</option>
+                                            <option id="2" name="2" value='2'>系统管理人员</option>
+                                            <option id="3" name="3" value='3'>教辅管理员</option>
+                                            <option id="4" name="4" value='4'>其他</option>
+                                        </select></div>
+                                    </div>
+                                    <div class="loginbox-submit">
+                                        <input class="btn btn-primary btn-block btn-group-md" style="margin: 10px auto;" value="登录" type="submit" onclick="return chickform(this.form)" >
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="forgot login-footer">
+                            <span>
+                                请保护好自己的账号信息！
+                            </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center fontsize1" style="margin: 15% auto;    ">
+    <h1 >欢迎进入成都东软学院考勤系统!</h1>
+    <h3>请注意保护自己的信息!</h3>
+</div>
+
+
+    <!--Basic Scripts-->
+    <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+   <script type="text/javascript" src="__PUBLIC__/style/kaoqin.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/style/login-register.js"></script>
+    <!--Beyond Scripts-->
+
+
+
+
+
+</body><!--Body Ends--></html>

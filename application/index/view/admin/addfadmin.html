@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加教辅人员</title>
+
+		<link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+		<!--Beyond styles-->
+
+		<link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+	</head>
+	<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="container-fluid">
+				<div class="navbar-container">
+					<div class="container-fluid">
+						<!-- Navbar Barnd -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<ul class="nav navbar-nav nav-pills">
+								<li ><img src="__PUBLIC__/images/psb%20(1).jpg" class="tupianlogo"></li>
+								<li ><a class="navbar-brand"  href=""><b>考勤管理系统</b></a></li>
+
+							</ul>
+
+						</div>
+						<!-- /Navbar Barnd -->
+						<!-- Sidebar Collapse -->
+						<div class="sidebar-collapse" id="sidebar-collapse">
+							<i class="collapse-icon fa fa-bars"></i>
+						</div>
+						<!-- /Sidebar Collapse -->
+						<!-- Account Area and Settings -->
+						<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li ><img src="__PUBLIC__/images/person2.jpg" class="tupianren"></li>
+								<li title=" 修改密码" class="toppadding"><h4><a  href="">
+									{$Request.session.username}
+								</a></h4></li>
+								<li class="rightpadding"><h4><a href="http://localhost:808/kqsystem/public/index.php/">退出登录</a></h4></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Account Area and Settings -->
+		</div>
+
+
+
+	</nav>
+
+	<div class=" container HomeTop ">
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="leftmenu" id="sidebar">
+					<div class="panel  panel-info">
+						<!-- Sidebar Menu -->
+						<div class="panel-heading"><h1><span class="menu-text">考勤系统</span></h1></div>
+						<ul class="nav nav-pills  nav-stacked" style="margin-bottom: 10%">
+							<!--Dashboard-->
+							<li role="presentation">
+								<h3><a href="#" class="menu-dropdown">
+									<i class="menu-icon fa fa-user"></i>
+									<span class="menu-text">添加人员管理 </span>
+									<i class="menu-expand"></i>
+								</a></h3>
+								<ul class="nav nav-pills  nav-stacked">
+									<li>
+										<a href="http://localhost:808/kqsystem/public/INDEX.PHP/INDEX/ADMIN/ADDTEACHER">
+                                    <span class="menu-text">
+                                        教师添加                                   </span>
+											<i class="menu-expand"></i>
+										</a>
+									</li>
+									<li>
+										<a href="http://localhost:808/kqsystem/public/INDEX.PHP/INDEX/ADMIN/ADDFADMIN">
+                                    <span class="menu-text">
+                                        管理员添加                                  </span>
+											<i class="menu-expand"></i>
+										</a>
+									</li>
+									<li>
+										<a href=" http://localhost:808/kqsystem/public/INDEX.PHP/INDEX/ADMIN/ADDSTUDENT">
+                                    <span class="menu-text">
+                                        学生添加                                  </span>
+											<i class="menu-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+
+						</ul>
+					</div>
+					<!-- /Sidebar Menu -->
+				</div>
+			</div>
+			<div class="col-md-5 bg-info">
+				<h2 >教辅管理员添加</h2>
+				<div class="toppadding">
+					<form action="" method="post" >
+						<div class="row">
+							<div class="col-md-3">
+								<h4 class="text-warning " >教辅管理员姓名:</h4>
+							</div>
+							<div class="col-md-9 pull-left">
+								<input id="username" name="username" type="text" class="widths">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<h4 class="text-warning ">密码:</h4>
+							</div>
+							<div class="col-md-9">
+								<input id="password" name="password" type="password" class="widths">
+							</div>
+
+
+
+						</div>
+						<button type="submit" name="submit" class="btn btn-info button1 btn-lg pull-right" >提交</button>
+
+					</form>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	</body>
+</html>
+

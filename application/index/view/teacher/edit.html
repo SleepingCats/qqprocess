@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <!--Beyond styles-->
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+    
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top"}
+
+	<!-- /头部 -->
+
+    <div class=" container HomeTop ">
+        <div class="row">
+            <div class="col-md-3">
+                {include file="common/xinxi"}
+            </div>
+            <div class="col-md-9" >
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                                        <li>
+                        <a href="#">系统</a>
+                    </li>
+                                        <li>
+                        <a href="{:url('admin/lst')}">教师考勤</a>
+                    </li>
+                        <li >修改考勤信息</li>
+                                        <li class="active">保存考勤信息</li>
+                                        </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post">
+                        <table class="table table-bordered table-hover table-responsive ">
+                            <thead >
+                            <tr class="active">
+                                <th class="text-center" width="4%">ID</th>
+                                <th class="text-center">班级号</th>
+                                <th class="text-center" >学生姓名</th>
+                                <th class="text-center" >考勤日期</th>
+                                <th class="text-center">课程名称</th>
+                                 <th class="text-center">指导教师</th>
+                                  <th class="text-center">考勤状态</th>
+                                  <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	  
+                            <tr class="bg-info">
+                                <td align="center">{$student.Id}</td>
+                                <td align="center">{$student.class}</td>
+                                <td align="center">{$student_name.name}</td>
+                                <td align="center">{$student.time}</td>
+                                  <td align="center">{$course_id.courseName}</td>
+                                  <td align="center">{$t_name.teacherName}</td>
+                                <td class="form-group-sm ">
+                                        <select name='state' id='state' >
+												<option id="1" name="1" value='1'>正常</option>
+												<option id="2" name="2" value='2'>迟到</option>
+												<option id="3" name="3" value='3'>旷课</option>
+												<option id="4" name="4" value='4'>事假</option>
+												<option id="5" name="5" value='5'>病假</option>
+												<option id="6" name="6" value='6'>早退</option>
+										</select>
+                                </td>
+                                <td align='center'>
+                                <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                           </div>
+                                </td>
+                                
+                            </tr>
+                         
+                   
+                        </tbody>
+
+
+                    </table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+                </div>
+            <!-- /Page Content -->
+
+
+	    <!--Basic Scripts-->
+    <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+    
+
+
+</body></html>

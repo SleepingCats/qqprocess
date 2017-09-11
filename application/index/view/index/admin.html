@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+    <!--Beyond styles-->
+
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+	<body>
+	<!--	<h1>欢迎来到考勤注册页面</h1>-->
+		{include file="common/top"}
+    <div class=" container HomeTop ">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="leftmenu" id="sidebar">
+                    <div class="panel  panel-info">
+                        <!-- Sidebar Menu -->
+                        <div class="panel-heading"><h1><span class="menu-text">考勤系统</span></h1></div>
+                        <ul class="nav nav-pills  nav-stacked" style="margin-bottom: 10%">
+                    <!--Dashboard-->
+                            <li role="presentation">
+                        <h3><a href="#" class="menu-dropdown">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text">添加人员管理 </span>
+                            <i class="menu-expand"></i>
+                        </a></h3>
+                        <ul class="nav nav-pills  nav-stacked">
+                            <li>
+                                <a href="http://localhost:808/kqsystem/public/INDEX.PHP/INDEX/ADMIN/ADDTEACHER">
+                                    <span class="menu-text">
+                                        教师添加                                   </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=" http://localhost:808/kqsystem/public/INDEX.PHP/INDEX/ADMIN/ADDSTUDENT">
+                                    <span class="menu-text">
+                                        学生添加                                  </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                        </ul>                            
+                    </li>
+
+
+                </ul>
+                        </div>
+                <!-- /Sidebar Menu -->
+            </div>
+                </div>
+            <div class="col-md-8">
+                <div class="jumbotron" style="background-color: white;opacity: 0.8">
+                    <div class="container text-center text-success">
+                        欢迎进入考勤系统-系统管理，请保护自己信息！
+                    </div>
+
+                </div>
+                <div class="widget-body">
+
+                    <div id="horizontal-form">
+                        <form class="form-horizontal" role="form" action="" method="post">
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label no-padding-right">设置审核期：</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="username" placeholder="" name="username"   type="text">
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label  class="col-sm-2 control-label no-padding-right">设置考勤锁定期:</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control"    type="datetime-local">
+                                </div>
+
+                            </div>
+
+                        </form>
+                        <div class="form-group">
+                            <div class="col-sm-7 "></div>>
+                            <div class="col-sm-3 ">
+                                <button type="submit" class="btn btn-info" onclick="sends()">保存信息</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+	</body>
+    <script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap.js"></script>
+    <script src="__PUBLIC__/style/kaoqin.js"></script>
+</html>
+
+

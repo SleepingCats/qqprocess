@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分类查询</title>
+		<link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/kaoqin.css" rel="stylesheet">
+		<!--Beyond styles-->
+
+		<link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+		<link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+	</head>
+	<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="container-fluid">
+				<div class="navbar-container">
+					<div class="container-fluid">
+						<!-- Navbar Barnd -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<ul class="nav navbar-nav nav-pills">
+								<li ><img src="__PUBLIC__/images/psb%20(1).jpg" class="tupianlogo"></li>
+								<li ><a class="navbar-brand"  href=""><b>考勤管理系统</b></a></li>
+
+							</ul>
+
+						</div>
+						<!-- /Navbar Barnd -->
+						<!-- Sidebar Collapse -->
+						<div class="sidebar-collapse" id="sidebar-collapse">
+							<i class="collapse-icon fa fa-bars"></i>
+						</div>
+						<!-- /Sidebar Collapse -->
+						<!-- Account Area and Settings -->
+						<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li ><img src="__PUBLIC__/images/person2.jpg" class="tupianren"></li>
+								<li  class="toppadding"><h4><a  href="">
+									{$Request.session.username}
+								</a></h4></li>
+								<li class="rightpadding"><h4><a href="http://localhost:808/kqsystem/public/index.php/">退出登录</a></h4></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Account Area and Settings -->
+		</div>
+
+
+
+	</nav>
+	   <div class=" container HomeTop ">
+		   <div class="row">
+			   <div class="col-md-3">
+				   {include file="common/xinxi"}
+			   </div>
+			   <div class="col-md-6 bg-info" style="border: 1px solid red;">
+		    <form action="" method="post">
+		     <h2 class="text-warning">分类查询</h2>
+				<div class="row">
+					<div class="col-md-3">
+						<h4 class="text-warning " >查询方式：</h4>
+					</div>
+					<div class="col-md-6">
+						<div style="display: inline-block;" >
+							<select name='ruleid' id='ruleid' class="btn btn-group btn-info">
+								<option id="1" name="1" value='1'>教师</option>
+								<option id="2" name="2" value='2'>班级</option>
+								<option id="3" name="3" value='3'>系部</option>
+								<option id="4" name="4" value='4'>学生</option>
+							</select>
+						</div>
+					</div>
+					</div>
+				  <div class="row">
+					<div class="col-md-3">
+						<h4 class="text-warning " >请输入：</h4>
+					</div>
+					<div class="col-md-6">
+						<input type="text" id='name' name='name'>
+					</div>
+					  </div>
+					<div class="col-xs-4 pull-right">
+						<input class="btn btn-info btn-block btn-group-md" style="margin: 10px auto;" value="查询" type="submit"  >
+
+					</div>
+                 </form>
+				</div>
+
+			   </div>
+			   </div>
+
+
+	</body>
+	<script src="__PUBLIC__/style/jquery-3.1.1.min.js"></script>
+	<script src="__PUBLIC__/style/bootstrap.js"></script>
+</html>
